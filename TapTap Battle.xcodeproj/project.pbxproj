@@ -16,6 +16,15 @@
 		C0AF90FC19CB5F8200A35133 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AF90FA19CB5F8200A35133 /* LaunchScreen.xib */; };
 		C0AF910819CB5F8200A35133 /* TapTap_BattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF910719CB5F8200A35133 /* TapTap_BattleTests.swift */; };
 		C0F47A0C19CC7D53006DF009 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A0B19CC7D53006DF009 /* MyriadPro-Bold.otf */; };
+		C0F47A1519CC9B73006DF009 /* background_win_blue_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A0D19CC9B73006DF009 /* background_win_blue_ipad.png */; };
+		C0F47A1619CC9B73006DF009 /* background_win_blue_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A0E19CC9B73006DF009 /* background_win_blue_ipad@2x.png */; };
+		C0F47A1719CC9B73006DF009 /* background_win_blue_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A0F19CC9B73006DF009 /* background_win_blue_iphone.png */; };
+		C0F47A1819CC9B73006DF009 /* background_win_blue_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A1019CC9B73006DF009 /* background_win_blue_iphone@2x.png */; };
+		C0F47A1919CC9B73006DF009 /* background_win_orange_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A1119CC9B73006DF009 /* background_win_orange_ipad.png */; };
+		C0F47A1A19CC9B73006DF009 /* background_win_orange_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A1219CC9B73006DF009 /* background_win_orange_ipad@2x.png */; };
+		C0F47A1B19CC9B73006DF009 /* background_win_orange_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A1319CC9B73006DF009 /* background_win_orange_iphone.png */; };
+		C0F47A1C19CC9B73006DF009 /* background_win_orange_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A1419CC9B73006DF009 /* background_win_orange_iphone@2x.png */; };
+		C0F47A1F19CC9BC0006DF009 /* restart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A1E19CC9BC0006DF009 /* restart@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +51,15 @@
 		C0AF910619CB5F8200A35133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AF910719CB5F8200A35133 /* TapTap_BattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapTap_BattleTests.swift; sourceTree = "<group>"; };
 		C0F47A0B19CC7D53006DF009 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
+		C0F47A0D19CC9B73006DF009 /* background_win_blue_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_win_blue_ipad.png; sourceTree = "<group>"; };
+		C0F47A0E19CC9B73006DF009 /* background_win_blue_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_win_blue_ipad@2x.png"; sourceTree = "<group>"; };
+		C0F47A0F19CC9B73006DF009 /* background_win_blue_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_win_blue_iphone.png; sourceTree = "<group>"; };
+		C0F47A1019CC9B73006DF009 /* background_win_blue_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_win_blue_iphone@2x.png"; sourceTree = "<group>"; };
+		C0F47A1119CC9B73006DF009 /* background_win_orange_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_win_orange_ipad.png; sourceTree = "<group>"; };
+		C0F47A1219CC9B73006DF009 /* background_win_orange_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_win_orange_ipad@2x.png"; sourceTree = "<group>"; };
+		C0F47A1319CC9B73006DF009 /* background_win_orange_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_win_orange_iphone.png; sourceTree = "<group>"; };
+		C0F47A1419CC9B73006DF009 /* background_win_orange_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_win_orange_iphone@2x.png"; sourceTree = "<group>"; };
+		C0F47A1E19CC9BC0006DF009 /* restart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restart@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,7 @@
 		C0AF90EA19CB5F8100A35133 /* TapTap Battle */ = {
 			isa = PBXGroup;
 			children = (
+				C0F47A1D19CC9B7A006DF009 /* Sprite */,
 				C0AF90ED19CB5F8200A35133 /* AppDelegate.swift */,
 				C0AF90EF19CB5F8200A35133 /* GameScene.sks */,
 				C0AF90F119CB5F8200A35133 /* GameScene.swift */,
@@ -119,6 +138,22 @@
 				C0AF910619CB5F8200A35133 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0F47A1D19CC9B7A006DF009 /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				C0F47A0D19CC9B73006DF009 /* background_win_blue_ipad.png */,
+				C0F47A0E19CC9B73006DF009 /* background_win_blue_ipad@2x.png */,
+				C0F47A0F19CC9B73006DF009 /* background_win_blue_iphone.png */,
+				C0F47A1019CC9B73006DF009 /* background_win_blue_iphone@2x.png */,
+				C0F47A1119CC9B73006DF009 /* background_win_orange_ipad.png */,
+				C0F47A1219CC9B73006DF009 /* background_win_orange_ipad@2x.png */,
+				C0F47A1E19CC9BC0006DF009 /* restart@2x.png */,
+				C0F47A1319CC9B73006DF009 /* background_win_orange_iphone.png */,
+				C0F47A1419CC9B73006DF009 /* background_win_orange_iphone@2x.png */,
+			);
+			name = Sprite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,9 +238,18 @@
 			files = (
 				C0AF90FC19CB5F8200A35133 /* LaunchScreen.xib in Resources */,
 				C0AF90F919CB5F8200A35133 /* Images.xcassets in Resources */,
+				C0F47A1919CC9B73006DF009 /* background_win_orange_ipad.png in Resources */,
 				C0F47A0C19CC7D53006DF009 /* MyriadPro-Bold.otf in Resources */,
 				C0AF90F019CB5F8200A35133 /* GameScene.sks in Resources */,
+				C0F47A1519CC9B73006DF009 /* background_win_blue_ipad.png in Resources */,
+				C0F47A1B19CC9B73006DF009 /* background_win_orange_iphone.png in Resources */,
+				C0F47A1A19CC9B73006DF009 /* background_win_orange_ipad@2x.png in Resources */,
+				C0F47A1F19CC9BC0006DF009 /* restart@2x.png in Resources */,
+				C0F47A1819CC9B73006DF009 /* background_win_blue_iphone@2x.png in Resources */,
+				C0F47A1619CC9B73006DF009 /* background_win_blue_ipad@2x.png in Resources */,
 				C0AF90F719CB5F8200A35133 /* Main.storyboard in Resources */,
+				C0F47A1C19CC9B73006DF009 /* background_win_orange_iphone@2x.png in Resources */,
+				C0F47A1719CC9B73006DF009 /* background_win_blue_iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

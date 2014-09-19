@@ -15,6 +15,7 @@ class GameScene: SKScene {
     private var oragePlayer : SKSpriteNode?
     private var bluePoints : SKLabelNode?
     private var oragePoints : SKLabelNode?
+    private var gameIsOn : Bool = true
     
     //contante de aumento
     let pointsToIncrise = CGFloat(10)
@@ -36,16 +37,27 @@ class GameScene: SKScene {
     //identificando touch
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        var localTouch = touches.anyObject() as UITouch
-        var locationTouch = localTouch.locationInNode(self)
-        indentifyTouchedNode(locationTouch)
+            var localTouch = touches.anyObject() as UITouch
+            var locationTouch = localTouch.locationInNode(self)
+            indentifyTouchedNode(locationTouch)
     }
     
     func indentifyTouchedNode(touchLocation: CGPoint){
-        if nodeAtPoint(touchLocation).isEqual(self.bluePlayer){
-            self.blueHasTouch()
-        }else if nodeAtPoint(touchLocation).isEqual(self.oragePlayer){
-            self.orangeHasTouch()
+        
+        var nodeTouched = nodeAtPoint(touchLocation)
+        
+        if gameIsOn {
+            if nodeTouched.isEqual(self.bluePlayer){
+                self.blueHasTouch()
+            }else if nodeTouched.isEqual(self.oragePlayer){
+                self.orangeHasTouch()
+            }
+        }else {
+            if nodeTouched.name == "restart"{
+                var game = GameScene(size: self.size)
+                var transition = SKTransition.fadeWithDuration(0.5)
+                self.view?.presentScene(game, transition: transition)
+            }
         }
     }
     
@@ -131,17 +143,30 @@ class GameScene: SKScene {
     }
     
     func verifyGameOver(){
-        
-        println("Scene Height \(self.size.height) ")
-        println("Blue height \(self.bluePlayer!.size.height)")
-        println("Blue height \(self.oragePlayer!.size.height)")
-        
         if self.bluePlayer!.size.height + 94 >= self.size.height{
-            println("azul ganhou")
+            self.gameOver("blue")
         }else if self.oragePlayer!.size.height + 94 >= self.size.height {
-            println("laranja ganhiu")
+            self.gameOver("orange")
         }
     }
     
+    
+    func gameOver(winner: String){
+        var gameOver: SKSpriteNode = SKSpriteNode(imageNamed: "background_win_" + winner + "_iphone");
+        gameOver.position = CGPointMake(self.size.width/2, self.size.height/2)
+        gameOver.setScale(0)
+        gameOver.zPosition = 4
+        
+        var restart = SKSpriteNode(imageNamed: "restart")
+        restart.name = "restart"
+        restart.position = CGPointMake(gameOver.size.width/2, gameOver.size.height - restart.size.height)
+        
+        gameOver.addChild(restart)
+        
+        self.gameIsOn = false
+        
+        gameOver.runAction(SKAction.scaleTo(1, duration: 0.5))
+        self.addChild(gameOver)
+    }
     
 }
