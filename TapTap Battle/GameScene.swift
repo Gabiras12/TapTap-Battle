@@ -86,6 +86,7 @@ class GameScene: SKScene {
         
         self.addChild(self.bluePoints!)
         self.addChild(self.oragePoints!)
+        
     }
     
     func blueHasTouch(){
