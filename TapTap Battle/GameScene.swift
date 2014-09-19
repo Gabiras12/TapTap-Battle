@@ -11,10 +11,10 @@ import SpriteKit
 class GameScene: SKScene {
 
     //variaveis
-    var bluePlayer : SKSpriteNode?
-    var oragePlayer : SKSpriteNode?
-    var bluePoints : SKLabelNode?
-    var oragePoints : SKLabelNode?
+    private var bluePlayer : SKSpriteNode?
+    private var oragePlayer : SKSpriteNode?
+    private var bluePoints : SKLabelNode?
+    private var oragePoints : SKLabelNode?
     
     //contante de aumento
     let pointsToIncrise = CGFloat(10)
@@ -74,19 +74,20 @@ class GameScene: SKScene {
         self.bluePoints = SKLabelNode(fontNamed: "MyriadPro-Bold")
         self.bluePoints!.text = "0"
         self.bluePoints!.fontSize = 35
-        self.bluePoints!.position = CGPointMake(20, self.size.height/2 + 20)
+        self.bluePoints!.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
+        self.bluePoints!.position = CGPointMake(self.bluePoints!.frame.size.width, self.size.height/2 + self.bluePoints!.frame.size.width)
         self.bluePoints!.zRotation = CGFloat(M_PI)
         self.bluePoints!.zPosition = 3
         
         self.oragePoints = SKLabelNode(fontNamed: "MyriadPro-Bold")
         self.oragePoints!.text = "0"
         self.oragePoints!.fontSize = 35
-        self.oragePoints!.position = CGPointMake(self.size.width - 20, self.size.height/2 - 20)
+        self.oragePoints!.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
+        self.oragePoints!.position = CGPointMake(self.size.width - self.oragePoints!.frame.size.width, self.size.height/2 - self.oragePoints!.frame.size.height)
         self.oragePoints!.zPosition = 3
         
         self.addChild(self.bluePoints!)
         self.addChild(self.oragePoints!)
-        
     }
     
     func blueHasTouch(){
@@ -94,6 +95,7 @@ class GameScene: SKScene {
         self.bluePlayer?.zPosition = 1
         self.bluePoints?.text = "\(1 + self.bluePoints!.text.toInt()!)"
         self.bluePlayer?.runAction(createActionToMove(self.bluePlayer!, node2: self.oragePlayer!))
+        self.moveLabels(self.bluePoints!, label2: self.oragePoints!)
     }
     
     func orangeHasTouch(){
@@ -101,19 +103,44 @@ class GameScene: SKScene {
         self.bluePlayer?.zPosition = 0
         self.oragePoints?.text = "\(1 + self.oragePoints!.text.toInt()!)"
         self.bluePlayer?.runAction(createActionToMove(self.oragePlayer!, node2: self.bluePlayer!))
+        self.moveLabels(self.oragePoints!, label2: self.bluePoints!)
     }
     
     func createActionToMove(node1 : SKSpriteNode, node2 : SKSpriteNode) -> SKAction{
-        var actionRun : SKAction = SKAction.runBlock({() in self.myRunBlock(node1, node2: node2)})
+        var moveAction : SKAction = SKAction.runBlock({() in self.blockCode(node1, node2: node2)})
+        var verifyGameOver : SKAction = SKAction.runBlock({() in self.verifyGameOver()})
         
-        var actionToCreate : SKAction = SKAction.sequence([actionRun])
+        var createdAction: SKAction = SKAction.sequence([moveAction,verifyGameOver])
 
-        return actionToCreate
+        return createdAction
     }
     
-    func myRunBlock(node1 : SKSpriteNode, node2 : SKSpriteNode){
+    func blockCode(node1 : SKSpriteNode, node2 : SKSpriteNode){
         node1.size = CGSizeMake(node1.size.width, node1.size.height + self.pointsToIncrise)
         node2.size = CGSizeMake(node2.size.width, node2.size.height - self.pointsToIncrise)
+    }
+    
+    func moveLabels(label1: SKLabelNode, label2: SKLabelNode){
+        if label1.isEqual(self.oragePoints){
+            label1.position = CGPointMake(label1.position.x, label1.position.y + pointsToIncrise)
+            label2.position = CGPointMake(label2.position.x, label2.position.y + pointsToIncrise)
+        } else {
+            label1.position = CGPointMake(label1.position.x, label1.position.y - pointsToIncrise)
+            label2.position = CGPointMake(label2.position.x, label2.position.y - pointsToIncrise)
+        }
+    }
+    
+    func verifyGameOver(){
+        
+        println("Scene Height \(self.size.height) ")
+        println("Blue height \(self.bluePlayer!.size.height)")
+        println("Blue height \(self.oragePlayer!.size.height)")
+        
+        if self.bluePlayer!.size.height + 94 >= self.size.height{
+            println("azul ganhou")
+        }else if self.oragePlayer!.size.height + 94 >= self.size.height {
+            println("laranja ganhiu")
+        }
     }
     
     
