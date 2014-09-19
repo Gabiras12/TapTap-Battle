@@ -15,6 +15,7 @@
 		C0AF90F919CB5F8200A35133 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AF90F819CB5F8200A35133 /* Images.xcassets */; };
 		C0AF90FC19CB5F8200A35133 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AF90FA19CB5F8200A35133 /* LaunchScreen.xib */; };
 		C0AF910819CB5F8200A35133 /* TapTap_BattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AF910719CB5F8200A35133 /* TapTap_BattleTests.swift */; };
+		C0F47A0C19CC7D53006DF009 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C0F47A0B19CC7D53006DF009 /* MyriadPro-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		C0AF910119CB5F8200A35133 /* TapTap BattleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TapTap BattleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AF910619CB5F8200A35133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AF910719CB5F8200A35133 /* TapTap_BattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapTap_BattleTests.swift; sourceTree = "<group>"; };
+		C0F47A0B19CC7D53006DF009 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				C0AF90F119CB5F8200A35133 /* GameScene.swift */,
 				C0AF90F319CB5F8200A35133 /* GameViewController.swift */,
 				C0AF90F519CB5F8200A35133 /* Main.storyboard */,
+				C0F47A0B19CC7D53006DF009 /* MyriadPro-Bold.otf */,
 				C0AF90F819CB5F8200A35133 /* Images.xcassets */,
 				C0AF90FA19CB5F8200A35133 /* LaunchScreen.xib */,
 				C0AF90EB19CB5F8200A35133 /* Supporting Files */,
@@ -200,6 +203,7 @@
 			files = (
 				C0AF90FC19CB5F8200A35133 /* LaunchScreen.xib in Resources */,
 				C0AF90F919CB5F8200A35133 /* Images.xcassets in Resources */,
+				C0F47A0C19CC7D53006DF009 /* MyriadPro-Bold.otf in Resources */,
 				C0AF90F019CB5F8200A35133 /* GameScene.sks in Resources */,
 				C0AF90F719CB5F8200A35133 /* Main.storyboard in Resources */,
 			);
@@ -415,6 +419,7 @@
 				C0AF910D19CB5F8200A35133 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0AF910E19CB5F8200A35133 /* Build configuration list for PBXNativeTarget "TapTap BattleTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				C0AF911019CB5F8200A35133 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
